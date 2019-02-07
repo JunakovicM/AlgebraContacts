@@ -12,6 +12,11 @@ spl_autoload_register(function($class) {
     require_once 'classes/' .$class . '.php';
 });
 
+
+$displayErrors = Config::get('app')['error_reporting'];
+ini_set('display_errors', $displayErrors);
+ini_set ('display_startup_errors', $displayErrors);
+
 require_once 'functions/sanitize.php';
 
 ?>
