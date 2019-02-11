@@ -1,7 +1,8 @@
 <?php
 
-return[
-   'name' => 'Algebra Contacts', 
-   'error' =>  1
+return [
+    'name' => 'Algebra Contacts',
+    'error_reporting' => 1
+]
 
-];
+?>
