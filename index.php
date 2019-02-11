@@ -25,9 +25,15 @@ Helper::getHeader('Algebra Contacts', 'main-header');
 
 <?php
 
+$db = DB::getInstance();
+$rezultat = $db->query("SELECT * FROM users");
+
 echo '<pre>';
-print_r(Config::get('session'));
-echo '</pre>';
+var_dump($rezultat);
+
+/* echo '<pre>';
+print_r(Config::get('app'));
+echo '</pre>'; */
 
 Helper::getFooter();
 
