@@ -26,14 +26,29 @@ Helper::getHeader('Algebra Contacts', 'main-header');
 <?php
 
 $db = DB::getInstance();
-$rezultat = $db->query("SELECT * FROM users");
+
+
+$get = $db->get('*','users');
+
+//$find = $db->find(5, 'users');
+//$delete = $db->delete('users', ['id', '=', 4]);
+
+$update = $db->update('users', 5,[
+	'username' 	=> 'markina',
+	'name' 		=> 'Ivan'
+]);
+
+/* $insert = $db->insert('users',[
+	'name'		=> 'Iva',
+	'username'	=> 'iva',
+	'password'	=> 'q12432543',
+	'salt'		=> '5468354',
+	'role_id'	=> '1'
+]); */
 
 echo '<pre>';
-var_dump($rezultat);
+var_dump($update);
 
-/* echo '<pre>';
-print_r(Config::get('app'));
-echo '</pre>'; */
 
 Helper::getFooter();
 
